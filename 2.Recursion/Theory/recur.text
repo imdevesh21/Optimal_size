@@ -1,0 +1,279 @@
+>>>What is Recursion in Programming?
+Recursion is a widely used idea in data structures and algorithms to solve complex problems by breaking them down into simpler ones. In this blog, we will understand the basic concepts of recursion and help you refine one of the critical problem-solving skills in data structures and algorithms.
+
+What do you mean by recursion?
+Recursion means "solving a problem using the solution of smaller subproblems (a smaller version of the same problem)" or "defining a problem in terms of itself."
+
+Recursion comes up in mathematics frequently, where we can find many examples of expressions written in terms of themselves. For example, calculating the value of the nth factorial and the nth Fibonacci numbers is one of the best examples. But recursion is just as much a programming concept!
+
+Finding the nth Factorial: n! = n * (n - 1)!
+Finding the nth Fibonacci: F(n) = F(n - 1) + F(n - 2)
+
+
+How recursion works in real life?
+Suppose you are standing in a long queue of people. How many people are directly behind you in the line? How can we solve this problem recursively?
+
+Rules
+One person can see only the person standing directly in front and behind. So, one can't just look back and count.
+Each person is allowed to ask questions from the person standing in front or behind.
+Solution
+You look behind and see if there is a person there. If not, then you can return the answer "0". If there is a person, repeat this step and wait for a response from the person standing behind.
+Once a person receives a response, they add 1 and respond to the person that asked them or the person standing in front of them.
+int peopleCount(Person currPerson) 
+{
+    if (noOneBehind(currPerson) == true)
+        return 0
+    else 
+    {
+        Person personBehind = currPerson.getBehind()
+        return 1 + peopleCount(personBehind)
+    }
+}
+How does recursion works in programming?
+In programming terms, recursion is a function calling itself until a "base condition" is true to produce the correct output. In other words, to solve a problem, we solve a problem that is a smaller instance of the same problem, and then use the solution to that smaller instance to solve the original problem.
+
+void function(input size)
+{
+    base case
+    .. .. ...
+    function(smaller input size) //recursive call
+    .. .. ...
+}
+
+int main()
+{
+    ... .. ...
+    function(input size)
+    ... .. ...
+}
+For a recursive algorithm to work, smaller subproblems must eventually arrive at the base case. In simple words, any recursive algorithm has two parts: the base case and the recursive structure.
+
+Base case
+The base case is a terminating condition where a function immediately returns the result. This is the smallest version of the problem for which we already know the solution.
+
+Recursive structure 
+The recursive structure is an idea to design a solution to a problem via the solution of its smaller sub-problems, i.e., the same problem but for a smaller input size. We continue calling the same problem for smaller input sizes until we reach the base case of recursion.
+
+Steps of problem-solving using recursion
+Define the base case: Think of the smallest version of the problem and write down the solution.
+Define the recursive structure: Assume we have a function to solve a problem of the given input size. Now we need to think: How could we use the problem's solution for a smaller input size to solve the problem for the given input size? In other words, how can we combine the solutions of the smaller subproblems to get the solution to the larger problem?
+Combine the base case and the recursive structure to generate a complete solution to the problem.
+Ideas to keep in mind while working with recursion
+Our code must cover all valid instances of smaller input sizes.
+We must have a correct base case that makes no recursive calls.
+When we make a recursive call, it should call a smaller instance and progress towards the base case.
+When we have a correct recursive structure and base case, then recursion would solve the problem for us. This is a "recursive leap of faith" where we should not worry about the intermediate steps of the recursive calls. Think!
+Basic examples of recursive functions
+Calculate the sum of two numbers using recursion
+sum(x, y) 
+= x, if(y == 0)
+= 1 + sum (x, y - 1), if(y > 0)
+Calculate the product of two numbers using recursion
+product(x, y)
+= 0, if(y == 0)
+= sum (x, product(x, y - 1), if(y > 0)
+Calculate the power of two numbers using recursion
+power(x, y) 
+= 1, if(y == 0)
+= product (x, power(x, y - 1), if(y > 0)
+Understanding recursion via finding nth Factorial
+The factorial of a non-negative integer is a multiplication of all integers smaller than or equal to n. For example. the factorial of 5 is 1 * 2 * 3 * 4 * 5 = 120
+
+Recursive structure
+According to the mathematical definition of the factorial of n, we can write:
+
+n! 
+= n * (n - 1) * (n - 2) *….* 2 * 1 
+= n * (n - 1)! 
+
+=> nth factorial = n * (n - 1)th factorial
+If we calculate the value of the (n - 1)th factorial, we can easily calculate the value of the nth factorial. It means we can solve the problem of input size n with its smaller problem of the input size (n - 1). In other words, we can solve this problem by using the idea of recursion!
+
+Suppose the function fact(n) and fact(n - 1) return the value of the nth and (n - 1)th factorial, respectively. Then we can write the following recursive structure:
+
+Base case
+In every recursive solution, there must be a terminating condition or base case where our recursion will directly give us results without breaking it again into the sub-problem. If we observe the above recursive structure, then we find the following chain of recursive calls behind the scene: 
+
+fact(n) 
+= n * fact(n - 1) 
+= n * (n - 1) * fact(n - 2)
+... and so on
+= n * (n - 1) * (n - 2) * ... * 4 * 3 * 2 * fact(1)
+= n * (n - 1) * (n - 2) * ... * 4 * 3 * 2 * 1 * fact(0)
+The factorial of a negative integer is not defined in the context of natural numbers. So fact(0) is the smallest version of the factorial problem where our recursion will terminate and return the value directly i.e. if n = 0, recursion will return the value 1.
+
+Recursive pseudocode of nth Factorial
+int fact(int n)
+{
+    if(n == 0)
+        return 1
+    return n * fact(n - 1)
+}
+How recursion works in the background?
+If we draw the flow of recursion for the factorial program, one can find this pattern: we are calling fact(0) last, but it is returning the value first. Similarly, we are calling fact(n) first, but it is returning the value last.
+
+Did you find some Last In First Out (LIFO) orders for recursive calls and return values? Yes, you got it right! Behind the scene, the compiler uses a stack data structure to simulate recursion and deliver the correct output. We call this stack: Call Stack!
+
+Order of recursive calls: larger problem to smaller problem
+fact(n) -> fact(n - 1) -> ... -> fact(i) -> ... -> fact(1) -> fact(0)
+Order of return values: smaller problem to larger problem
+fact(0) -> fact(1) -> ... -> fact(i) -> ... -> fact(n - 1) -> fact(n)
+How does the idea of the call stack work in recursion?
+The information about the execution of a recursive function is stored in the call stack. It contains details about the execution: the current state of the function control flow, local variables, and other internal information.
+During the recursion, when the function calls the same function for a smaller input size, memory is allocated to it, and it goes to the top of the call stack. 
+In other words, the memory for a called function is allocated on top of the memory allocated for the calling function, and a different copy of local variables is created for each function call.
+When the base case is reached, the function returns its value to the function by which it is called, memory is deallocated, and the process continues.
+Visualization for calculating fact(5) using recursion
+
+Examples of some famous recursive algorithms
+Reverse an array
+Recursive structure: reverse (A[], l, r) = swap(A[l], A[r]) + reverse(A, l + 1, r - 1).
+
+Base case: if (l >= r) then return.
+
+Recurrence relation: T(n) = T(n - 2) + c, Time complexity = O(n).
+
+Finding the GCD of two numbers
+Recursive structure: GCD(a, b) = GCD(b, a mod b), here a > b.
+
+Base case: GCD(a, 0) = a.
+
+Recurrence relation: T(n) = T(n/d) + c, where d is a decreasing factor, Time complexity = O(log b).
+
+Finding the nth Fibonacci
+Recursive structure: fib(n) = fib(n - 1) + fib(n - 2).
+
+Base case: We have 2 base cases: fib(0) = 0 and fib(1) = 1.
+
+Recurrence relation: T(n) = T(n - 1) + T(n - 2) + c, Time complexity = O(2^n).
+
+Tower of Hanoi problem
+Recursive structure: We move a stack of n disks from peg X to Y using peg Z
+
+- Move top n - 1 disks from X to Z
+- Move bottom disk from X to Y
+- Move top n - 1 disks from Z peg to Y
+Base case: If n = 1, move disk from X to Y.
+
+Recurrence relation: T(n) = 2 T(n - 1) + c, Time complexity = O(2^n).
+
+Binary Search Algorithm
+Recursive structure
+
+binarySearch(A[], l, r, k)
+- if A[mid] = k, return mid
+- if (A[mid] > k), binarySearch(A[], l, mid - 1, k)
+- if (A[mid] < k), binarySearch(A[], mid + 1, r, k)
+Base case: If (l > r) then return -1.
+
+Recurrence relation: T(n) = T(n/2) + c, Time complexity = O(log n).
+
+Merge Sort Algorithm
+Recursive structure
+
+mergeSort (A[], l, r)
+- mergeSort(A, l, mid)
+- mergeSort(A, mid+1, r)
+- merge(A, l, mid, r)
+Base case: if (l == r) then return. This is a case of a single-element array.
+
+Recurrence relation: T(n) = 2 T(n/2) + cn, Time complexity = O(nlogn).
+
+Quick Sort Algorithm
+Recursive structure
+
+quickSort(A[], l, r)
+- pivot = partition(A, l, r)
+- quickSort(A, l, pivot - 1)
+- quickSort(A, pivot + 1, r)
+Base case: if (l >= r) then return.
+
+Recurrence relation: T(n) = Sum (i = 0 to n - 1) [T(i) + T(n - i - 1)]/ n, Time complexity = O(nlogn) [Average case analysis].
+
+Reverse a Linked List
+Recursive structure
+
+reverseList(Node head)
+- Node remaining = reverseList(head->next)
+- head->next->next = head
+- head->next = NULL
+- return remaining
+Base case: if (head == NULL || head->next == NULL), return head.
+
+Recurrence relation: T(n) = T(n - 1) + c, Time complexity = O(n).
+
+Post-order Traversal of a Binary Tree
+
+Recursive structure
+
+postorder(root)
+- postorder(root->left)
+- postorder(root->right)
+- Visit the root
+Base case: if(root == NULL), then return.
+
+Recurrence relation: T(n) = T(n - 1) + c, Time complexity = O(n).
+
+Print all permutation of a given string
+
+Recursive structure
+
+permute(S[], l, r)
+=>
+for(i = l to r)  
+{
+    swap(S[l], S[i])
+    permute(S, l + 1, r)
+    swap(S[l], S[i])
+}
+Base case: if(l == r) then print(A).
+
+Recurrence relation: T(n) = sum (i = 0 to n - 1) [T(n - i) + c], Time complexity = O(n!).
+
+Stack overflow error in recursion
+When we call a recursive function, the return address and arguments are pushed onto the call stack. The stack is finite, so if the recursion is too deep, you'll eventually run out of stack space. This is also called the stack overflow in recursion. In some situations, if the recursive function is tail-recursive, some compilers might optimize the recursive call away by turning it into a jump. Popular reasons for stack overflow error:
+
+The recursive function is written with a missing base case. 
+A recursive function call with an incorrect base case.
+Common mistakes in recursive implementations
+Here are two common ways that a recursive implementation can go wrong:
+
+The base case is missing entirely, or the problem needs more than one base case, but not all the base cases are covered.
+The recursive step doesn’t reduce to a smaller subproblem, so the recursion doesn’t converge.
+Look for these when you are debugging. On the bright side, an infinite loop in an iterative implementation usually becomes a stack overflow error in a recursive implementation. A buggy recursive program fails faster!
+
+Analysis of recursive algorithms
+The basic idea of recursion analysis is: Calculate the total number of operations performed by recursion at each recursive call and do the sum to get the overall time complexity. So when recursion is doing constant operation at each recursive call, we just count the total number of recursive calls. Otherwise, the analysis will be a little mathematical if the operation count at each recursive call depends on the input size.
+
+Overall, there are several techniques to analyze recursion: Substitution method, Recursion tree method, and Master theorem.
+
+The recursion tree method is one of the most popular and fundamental approaches to analysis, where we define recurrence relation, draw a recursion tree, calculate the cost of each level, and do level by level sum to get the overall time complexity.
+The substitution method is a simple idea: We write the recurrence relation function in terms of input size and substitute the value for a smaller input size to get a mathematical series in terms of n. This method works best for some simple recursive functions, but mathematical series can be complex to calculate for some functions.
+The master theorem is one of the most popular techniques which can only be applied to analyze divide and conquer algorithms.
+Explore this blog to learn recursion analysis: Analysis of Recursion in data structure and algorithms
+
+Recursion Vs. Iteration
+Both iteration and recursion involve repetition: Iteration explicitly uses a repetition structure, while recursion achieves repetition through repeated method calls.
+Iteration and recursion each involve a termination case: Iteration terminates when the loop condition becomes false, and recursion terminates when a base case is reached.
+Iteration and recursion can both result in infinite repetition: An infinite loop occurs with iteration if the loop condition always evaluates to true, while infinite recursion occurs if the recursion step does not reduce the problem in a manner that converges on the base case.
+Recursion repeatedly invokes method calls to smaller problems, and consequently, there is an overhead of method calls. This can be expensive in both processor time and memory space.
+Explore this blog for more details: 
+Iteration vs Recursion comparison
+
+Application of recursion in problem-solving 
+Divide and conquer approach
+S﻿olving searching and sorting algorithms
+Solving dynamic programming problems
+Problem-solving using Backtracking
+Solving linked list problems
+Solving tree problems using DFS
+Solving graph problems using DFS
+Designing approximation algorithms
+Concepts to explore further
+Types of recursion
+Tail recursion and recursive optimization
+The idea of functional programming
+Coding problems to practice using recursion
+Content references
+Algorithms by CLRS
+The Algorithm Design Manual by Steven Skiena
