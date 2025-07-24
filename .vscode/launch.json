@@ -2,6 +2,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "subsets2",
+      "request": "launch",
+      "mainClass": "solve.subsets2",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "SubsetsGenerator",
+      "request": "launch",
+      "mainClass": "solve.SubsetsGenerator",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "findSubsets",
+      "request": "launch",
+      "mainClass": "solve.findSubsets",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "factorialN",
       "request": "launch",
       "mainClass": "factorialN",
