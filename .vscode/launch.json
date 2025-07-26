@@ -2,6 +2,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "combinationSum3",
+      "request": "launch",
+      "mainClass": "solve.combinationSum3",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "combinationSum2",
+      "request": "launch",
+      "mainClass": "solve.combinationSum2",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "combinationSum",
+      "request": "launch",
+      "mainClass": "solve.combinationSum",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "subsets2",
       "request": "launch",
       "mainClass": "solve.subsets2",
