@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "letterCombination",
+      "request": "launch",
+      "mainClass": "solve.letterCombination",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "combinationSum3",
       "request": "launch",
       "mainClass": "solve.combinationSum3",
