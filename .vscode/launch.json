@@ -2,6 +2,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "wordSearch",
+      "request": "launch",
+      "mainClass": "solve.wordSearch",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "palindromePartitioning",
+      "request": "launch",
+      "mainClass": "solve.palindromePartitioning",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "letterCombination",
       "request": "launch",
       "mainClass": "solve.letterCombination",
