@@ -2,6 +2,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "wordBreak",
+      "request": "launch",
+      "mainClass": "solve.wordBreak",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "rateMaze",
+      "request": "launch",
+      "mainClass": "solve.rateMaze",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "knights",
+      "request": "launch",
+      "mainClass": "solve.knights",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "NQueen",
+      "request": "launch",
+      "mainClass": "solve.NQueen",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "wordSearch",
       "request": "launch",
       "mainClass": "solve.wordSearch",
