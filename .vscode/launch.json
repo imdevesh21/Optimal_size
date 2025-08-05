@@ -2,6 +2,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "leetcode1482",
+      "request": "launch",
+      "mainClass": "leetcode1482",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "bubble_Sort",
+      "request": "launch",
+      "mainClass": "bubble_Sort",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "sudokoSolver",
+      "request": "launch",
+      "mainClass": "sudokoSolver",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "wordBreak",
       "request": "launch",
       "mainClass": "solve.wordBreak",
