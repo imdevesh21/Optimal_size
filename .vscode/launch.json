@@ -2,6 +2,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Interpolation_searching",
+      "request": "launch",
+      "mainClass": "Searching_Algo.Interpolation_searching",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Binary_Search",
+      "request": "launch",
+      "mainClass": "Searching_Algo.Binary_Search",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "unordered_search",
+      "request": "launch",
+      "mainClass": "Searching_Algo.unordered_search",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "leetcode1482",
       "request": "launch",
       "mainClass": "leetcode1482",
