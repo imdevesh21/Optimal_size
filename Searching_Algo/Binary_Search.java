@@ -1,6 +1,7 @@
 package Searching_Algo;
 
 public class Binary_Search {
+  // Iterative bs time_complexity -- O(log n)
   // public static int binarySearch(int[] arr, int t){
   //   int n = arr.length;
   //   int low = 0, high = n - 1;
@@ -17,7 +18,7 @@ public class Binary_Search {
   //   return -1;
   // }
 
-  // recursive binarySearch
+  // recursive binarySearch O(1) and O(log n)
   public static int binarySearch(int[] arr, int low, int high, int target){
     int mid = low + (high - low)/2;
     if(low > high){
