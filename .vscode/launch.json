@@ -2,6 +2,90 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Find_Peak_Element",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.Find_Peak_Element",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Single_Element_Sorted_Array",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.Single_Element_Sorted_Array",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "how_many_times_rotated",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.how_many_times_rotated",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "find_minimum_rotated_sorted",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.find_minimum_rotated_sorted",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Search_Rotated_Sorted_2",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.Search_Rotated_Sorted_2",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Search_Sorted_Rotated",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.Search_Sorted_Rotated",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "First_Last_Occ",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.First_Last_Occ",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Floor_and_ceil",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.Floor_and_ceil",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Search_Insert_Position",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.Search_Insert_Position",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Implement_Upper_Bound",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.Implement_Upper_Bound",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Implement_lower_Bound",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.Implement_lower_Bound",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "find_X",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_One.find_X",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "Interpolation_searching",
       "request": "launch",
       "mainClass": "Searching_Algo.Interpolation_searching",
