@@ -2,6 +2,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Find_Nth_Root",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_Two.Find_Nth_Root",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Find_Sqrt_Integer",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_Two.Find_Sqrt_Integer",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "Find_Peak_Element",
       "request": "launch",
       "mainClass": "Binary_Search.Lecture_One.Find_Peak_Element",
