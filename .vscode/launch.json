@@ -2,6 +2,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Leetcode_3195",
+      "request": "launch",
+      "mainClass": "Leetcode_3195",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Minimum_Days_Required_Bouquets",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_Two.Minimum_Days_Required_Bouquets",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "KokoEatingBanana",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_Two.KokoEatingBanana",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "Koko_Eating_Banana",
+      "request": "launch",
+      "mainClass": "Binary_Search.Lecture_Two.Koko_Eating_Banana",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "Find_Nth_Root",
       "request": "launch",
       "mainClass": "Binary_Search.Lecture_Two.Find_Nth_Root",
