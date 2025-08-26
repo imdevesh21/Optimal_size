@@ -2,6 +2,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Leetcode_3000",
+      "request": "launch",
+      "mainClass": "Leetcode_3000",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "containsDuplicates",
+      "request": "launch",
+      "mainClass": "EasyProblems.containsDuplicates",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
+      "name": "checkDuplicate",
+      "request": "launch",
+      "mainClass": "interview.checkDuplicate",
+      "projectName": "Optimal_size_378313f8"
+    },
+    {
+      "type": "java",
       "name": "Leetcode_3195",
       "request": "launch",
       "mainClass": "Leetcode_3195",
